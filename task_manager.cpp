@@ -22,7 +22,7 @@ struct CompareTask {
 
 class TaskManager {
     public:
-    // declaring the priority queue 'tasks'
+    // declare the priority queue 'tasks'
     priority_queue<Task, vector<Task>, CompareTask> tasks;
 
     // method to add a task
@@ -35,7 +35,7 @@ class TaskManager {
         if (tasks.empty()) {
             cout << "No tasks to show.\n"; return;
         }
-        // copying 'tasks' to 'temp' to display all the tasks without removing them from 'tasks'
+        // copy 'tasks' to 'temp' to display all the tasks without removing them from 'tasks'
         priority_queue<Task, vector<Task>, CompareTask> temp = tasks;
         while (!temp.empty()) {
             Task task = temp.top();
