@@ -6,7 +6,7 @@ This is a task manager app that organizes tasks by priority, helping you get thi
 
 Work in progress
 
-## License
+## Author
 
 Copyright (c) 2025 [Saptaparno Chakraborty](https://github.com/schak04).  
 All rights reserved.
