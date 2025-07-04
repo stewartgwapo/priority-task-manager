@@ -53,7 +53,23 @@ class TaskManager {
     }
 
     // method to update a task
-    void updateTask() {};
+    void updateTask() {
+        showAllTasks(); // so the user can choose which one to update
+        vector<Task> tasksVec; // declare a vector to store tasks from the priority queue
+        priority_queue<Task, vector<Task>, CompareTask> temp = tasks; // temp priority queue
+        
+        // extract all the tasks from the priority queue into a vector
+        while (!temp.empty()) {
+            tasksVec.push_back(temp.top());
+            temp.pop();
+        }
+
+        cout<<"Which task do you want to update? (Enter task no.): "; int tn; cin>>tn;
+        cout<<"Alright. Updating Task "<<tn<<"...\n";
+        cout<<"Enter a new name for the task \""<<tasksVec[tn].taskName<<"\": ";
+        string newName; getline(cin, newName);
+        tasksVec[tn].taskName = newName;
+    }
 
     // method to mark a task as completed
     void markAsCompleted() {};
