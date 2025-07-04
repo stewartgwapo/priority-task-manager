@@ -82,7 +82,7 @@ class TaskManager {
 
         cout << "Enter a new priority for the task \"" << tasksVec[tn].taskName << "\": ";
         int newPriority; cin >> newPriority;
-        tasksVec[tn].date = newPriority;
+        tasksVec[tn].priority = newPriority;
     }
 
     // method to mark a task as completed
