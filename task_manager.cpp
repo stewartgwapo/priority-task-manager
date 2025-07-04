@@ -64,11 +64,13 @@ class TaskManager {
             temp.pop();
         }
 
-        cout<<"Which task do you want to update? (Enter task no.): "; int tn; cin>>tn;
-        cout<<"Alright. Updating Task "<<tn<<"...\n";
-        cout<<"Enter a new name for the task \""<<tasksVec[tn].taskName<<"\": ";
+        cout << "Which task do you want to update? (Enter task no.): "; int tn; cin >> tn;
+        cout << "Alright. Updating Task " << tn << "...\n";
+        cout << "Enter a new name for the task \"" << tasksVec[tn].taskName << "\": ";
         string newName; getline(cin, newName);
         tasksVec[tn].taskName = newName;
+
+
     }
 
     // method to mark a task as completed
