@@ -37,9 +37,11 @@ class TaskManager {
         }
         // copy 'tasks' to 'temp' to display all the tasks without removing them from 'tasks'
         priority_queue<Task, vector<Task>, CompareTask> temp = tasks;
+        int idx = 1;
         while (!temp.empty()) {
             Task task = temp.top();
             cout << "--------------------------\n";
+            cout << "Task " << idx++ << "\n";
             cout << "Priority: " << task.priority << "\n";
             cout << "Task Name: " << task.taskName << "\n";
             cout << "Description: " << task.taskDesc << "\n";
